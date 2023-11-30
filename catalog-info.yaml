@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "labs-hub-ngfw-poc"
+  description: Deploying a Node.js test application for ngfw
+  annotations:
+    # This must match folder-name/job-name in Jenkins.
+    jenkins.io/job-full-name: cft:HMCTS_labs/labs-hub-ngfw-poc
+    github.com/project-slug: 'hmcts/labs-hub-ngfw-poc'
+  tags:
+    - java
+  links:
+    - url: https://hmcts-reform.slack.com/app_redirect?channel=ozzy.ibrahim@justice.gov.uk
+      title: ozzy.ibrahim@justice.gov.uk on Slack
+      icon: chat
+spec:
+  type: service
+  system: labs
+  lifecycle: experimental
+  owner: dts_platform_operations

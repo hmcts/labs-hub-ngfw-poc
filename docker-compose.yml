@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  hub-ngfw-poc:
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    image: hmctspublic.azurecr.io/labs/hub-ngfw-poc
+    ports:
+      - $SERVER_PORT:$SERVER_PORT
