@@ -99,6 +99,12 @@ task smoke(type: Test) {
   classpath = sourceSets.smokeTest.runtimeClasspath
 }
 
+configurations.checkstyle {
+  resolutionStrategy.capabilitiesResolution.withCapability("com.google.collections:google-collections") {
+    select("com.google.guava:guava:0")
+  }
+}
+
 checkstyle {
   maxWarnings = 0
   toolVersion = '10.12.5'
