@@ -30,4 +30,11 @@
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-web@.*$</packageUrl>
     <vulnerabilityName>CVE-2016-1000027</vulnerabilityName>
   </suppress>
+  <suppress>
+    <notes><![CDATA[
+      CVE is a false alarm as attacker is unale to exploit - https://github.com/FasterXML/jackson-databind/issues/3972
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/com\.fasterxml\.jackson\.core/jackson-databind@2\.15\.3</packageUrl>
+    <vulnerabilityName>CVE-2023-35116</vulnerabilityName>
+  </suppress>
 </suppressions>
