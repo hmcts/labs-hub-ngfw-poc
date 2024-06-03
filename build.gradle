@@ -101,7 +101,7 @@ task smoke(type: Test) {
 
 configurations.checkstyle {
   resolutionStrategy.capabilitiesResolution.withCapability("com.google.collections:google-collections") {
-    select("com.google.guava:guava:33.2.0-jre")
+    select("com.google.guava:guava:33.2.1-jre")
   }
 }
 
@@ -187,7 +187,7 @@ dependencyManagement {
   dependencies {
     dependency group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.70'
     // CVE-2018-10237 - Unbounded memory allocation
-    dependencySet(group: 'com.google.guava', version: '33.2.0-jre') {
+    dependencySet(group: 'com.google.guava', version: '33.2.1-jre') {
       entry 'guava'
     }
   }
